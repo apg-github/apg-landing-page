@@ -1,3 +1,18 @@
+ul,
+ol {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+main {
+  width: 100%;
+  min-height: 20rem;
+}
+
 body {
   font-family: Lato;
   margin: 0;
@@ -11,13 +26,56 @@ nav {
   color: white;
 }
 
-.logo {
-  font-family: Kaushan Script;
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4rem;
+  min-height: 20rem;
+  width: 100%;
 }
 
-.logo a {
+nav .container .logo {
+  font-family: Kaushan Script;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+
+nav .container .logo a {
   font-size: 4rem;
   color: white;
+}
+
+nav .container .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 0;
+}
+
+nav .container .navbar ul li {
+  min-height: 5rem;
+  min-width: 10rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+nav .container .navbar ul li a {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  font-size: 1.5rem;
 }
 
 #contact-pig {
@@ -29,7 +87,6 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-align: center;
@@ -39,6 +96,10 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding: 0.5rem;
 }
 

@@ -1,0 +1,16 @@
+//* declaring variables below
+
+$fColor: white;
+$bgColor: rgb(46, 43, 43);
+
+//* general settings/styles below
+
+ul,
+ol {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a:hover {
+  cursor: pointer;
+}

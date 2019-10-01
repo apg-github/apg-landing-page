@@ -1,5 +1,10 @@
-$fColor: white;
-$bgColor: rgb(46, 43, 43);
+//* importing other scss files below
+
+@import "./_variables";
+@import "./main";
+@import "./mixins";
+
+//* Styles below
 
 body {
   font-family: Lato;
@@ -11,28 +16,53 @@ body {
 nav {
   background-color: $bgColor;
   color: $fColor;
-}
-
-.logo {
-  font-family: Kaushan Script;
-  a {
+  .container {
+    display: flex;
+    align-items: center;
     font-size: 4rem;
-    color: $fColor;
+    min-height: 20rem;
+    width: 100%;
+    .logo {
+      font-family: Kaushan Script;
+      width: 50%;
+      height: 100%;
+
+      text-align: center;
+      a {
+        font-size: 4rem;
+        color: $fColor;
+      }
+    }
+    .navbar {
+      ul {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        padding: 0;
+        li {
+          min-height: 5rem;
+          min-width: 10rem;
+          text-align: center;
+          vertical-align: middle;
+          a {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
   }
 }
-
 #contact-pig {
   max-width: 200px;
   max-height: 200px;
 }
 
 .flex-container {
-  display: flex;
-  width: 100%;
-  align-content: center;
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
+  @include flexCenter(row);
   padding: 0.5rem;
 }
 

@@ -1,0 +1,10 @@
+//* file to declaring scss mixins
+
+@mixin flexCenter($dir) {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: $dir;
+}
