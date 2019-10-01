@@ -1,0 +1,43 @@
+$fColor: white;
+$bgColor: rgb(46, 43, 43);
+
+body {
+  font-family: Lato;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: $bgColor;
+  color: $fColor;
+}
+
+.logo {
+  font-family: Kaushan Script;
+  a {
+    font-size: 4rem;
+    color: $fColor;
+  }
+}
+
+#contact-pig {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.flex-container {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+footer {
+  div {
+    min-width: 48%;
+  }
+}
