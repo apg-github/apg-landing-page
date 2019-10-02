@@ -8,9 +8,25 @@ a:hover {
   cursor: pointer;
 }
 
+.whiteBg {
+  background-color: white;
+}
+
+.blackBg {
+  background-color: #1f1d1d;
+}
+
 main {
   width: 100%;
   min-height: 20rem;
+}
+
+.container {
+  width: 100vw;
+}
+
+.block {
+  min-height: 100vh;
 }
 
 body {
@@ -23,7 +39,7 @@ body {
 }
 
 nav {
-  background-color: #2e2b2b;
+  background-color: #1f1d1d;
   color: white;
 }
 

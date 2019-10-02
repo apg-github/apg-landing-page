@@ -1,7 +1,7 @@
 //* declaring variables below
 
 $fColor: white;
-$bgColor: rgb(46, 43, 43);
+$bgColor: rgb(31, 29, 29);
 
 //* general settings/styles below
 
@@ -13,4 +13,11 @@ ol {
 
 a:hover {
   cursor: pointer;
+}
+
+.whiteBg {
+  background-color: $fColor;
+}
+.blackBg {
+  background-color: $bgColor;
 }
