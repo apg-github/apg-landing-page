@@ -29,6 +29,41 @@ main {
   min-height: 100vh;
 }
 
+.flex-custom {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.tiles {
+  display: block;
+  height: 300px;
+  width: 40%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: white;
+  border: solid black 1px;
+  margin: 2%;
+}
+
+p {
+  padding: 2rem 4rem 0 4rem;
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
 body {
   font-family: Lato;
   margin: 0;

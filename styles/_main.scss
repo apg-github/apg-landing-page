@@ -11,3 +11,29 @@ main {
 .block {
   min-height: 100vh;
 }
+.flex-custom {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-around;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.tiles {
+  display: block;
+  height: 300px;
+  width: 40%;
+  align-self: center;
+  background-color: $fColor;
+  border: solid black 1px;
+  margin: 2%;
+}
+
+p {
+  padding: 2rem 4rem 0 4rem;
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
