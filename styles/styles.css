@@ -1,3 +1,4 @@
+/*/ general settings/styles below*/
 ul,
 ol {
   text-decoration: none;
@@ -16,9 +17,12 @@ a:hover {
   background-color: #1f1d1d;
 }
 
+.txt-type .txt {
+  border-right: 0.1rem solid #777;
+}
+
 main {
   width: 100%;
-  min-height: 20rem;
 }
 
 .container {
@@ -64,13 +68,30 @@ p {
   letter-spacing: 0.2rem;
 }
 
+html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: Lato;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 10px;
+  font-size: 15px;
+}
+
+.wBg {
+  background-color: #white;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1 {
+  margin: 0;
 }
 
 nav {
@@ -95,49 +116,117 @@ nav .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  height: 200px;
   font-size: 4rem;
-  min-height: 20rem;
   width: 100%;
 }
 
 nav .container .logo {
   font-family: Kaushan Script;
-  width: 50%;
-  height: 100%;
+  width: 35%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
 nav .container .logo a {
+  margin: auto auto;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-content: center;
+  height: 100%;
   font-size: 4rem;
   color: white;
+}
+
+nav .container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 65%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 nav .container .navbar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
   padding: 0;
+  margin: 0;
+  height: 50%;
 }
 
 nav .container .navbar ul li {
-  min-height: 5rem;
-  min-width: 10rem;
   text-align: center;
-  vertical-align: middle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-content: center;
 }
 
 nav .container .navbar ul li a {
   width: 100%;
-  height: 100%;
-  vertical-align: middle;
   font-size: 1.5rem;
+  text-align: center;
+  line-height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  vertical-align: center;
+}
+
+#welcome {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  background-color: #1f1d1d;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 #contact-pig {
@@ -162,11 +251,14 @@ nav .container .navbar ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 0.5rem;
 }
 
 footer div {
   min-width: 48%;
   font-size: 2rem;
+}
+
+section {
+  padding: 5rem 0 5rem 0;
 }
 /*# sourceMappingURL=styles.css.map */

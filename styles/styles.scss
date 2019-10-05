@@ -6,56 +6,109 @@
 
 //* styles below
 
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: Lato;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 10px;
+  font-size: 15px;
+  //background-color: $bgColor;
 }
-
+.wBg {
+  background-color: $bgWColor;
+  margin-top: 0;
+  padding-top: 0;
+}
+h1 {
+  margin: 0;
+}
 nav {
   background-color: $bgColor;
   color: $fColor;
   .container {
     @include flexCenter(row);
+    height: 200px;
     font-size: 4rem;
-    min-height: 20rem;
     width: 100%;
+
     .logo {
       font-family: Kaushan Script;
-      width: 50%;
-      height: 100%;
-
+      width: 35%;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+
       a {
+        //display: block;
+        margin: auto auto;
+        text-align: center;
+        justify-content: center;
+        justify-content: center;
+        height: 100%;
         font-size: 4rem;
         color: $fColor;
       }
     }
     .navbar {
+      display: flex;
+      //flex-grow: 2;
+      height: 100%;
+      width: 65%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       ul {
         display: flex;
-        flex-direction: row;
-        align-items: stretch;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
         padding: 0;
+        margin: 0;
+        height: 50%;
         li {
-          min-height: 5rem;
-          min-width: 10rem;
           text-align: center;
-          vertical-align: middle;
+          display: flex;
+          justify-content: center;
+          width: 20%;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+
           a {
             width: 100%;
-            height: 100%;
-            vertical-align: middle;
-
+            //height: 100%;
             font-size: 1.5rem;
+            text-align: center;
+            line-height: 100%;
+            justify-content: center;
+            vertical-align: center;
           }
         }
       }
     }
   }
 }
+#welcome {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  background-color: $bgColor;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 #contact-pig {
   max-width: 300px;
   max-height: 300px;
@@ -63,7 +116,6 @@ nav {
 
 .flex-container {
   @include flexCenter(row);
-  padding: 0.5rem;
 }
 
 footer {
@@ -71,4 +123,8 @@ footer {
     min-width: 48%;
     font-size: 2rem;
   }
+}
+
+section {
+  padding: 5rem 0 5rem 0;
 }

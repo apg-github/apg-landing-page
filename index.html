@@ -6,7 +6,7 @@
     <meta name="description" content="Explore.org site" />
     <meta name="author" content="APG" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript" />
+    <meta name="keywords" content="HTML,CSS,JavaScript,Images" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Kaushan+Script|Lato|Notable&display=swap"
@@ -14,26 +14,36 @@
     />
   </head>
   <body>
-    <section>
-      <nav>
-        <div class="container">
-          <div class="logo"><a>Exploited Explorers</a></div>
-          <div class="navbar">
-            <ul>
-              <li class="nav-items"><a>About</a></li>
-              <li class="nav-items"><a>Informations</a></li>
-              <li class="nav-items"><a>Views</a></li>
-              <li class="nav-items"><a>Prices</a></li>
-              <li class="nav-items"><a>Contact</a></li>
-            </ul>
-          </div>
+    <nav>
+      <div class="container flex-container">
+        <div class="logo"><a id="name"></a></div>
+        <div class="navbar">
+          <ul>
+            <li class="nav-items"><a>About</a></li>
+            <li class="nav-items"><a>Informations</a></li>
+            <li class="nav-items"><a>Views</a></li>
+            <li class="nav-items"><a>Prices</a></li>
+            <li class="nav-items"><a>Contact</a></li>
+          </ul>
         </div>
-      </nav>
-    </section>
+      </div>
+    </nav>
 
     <main>
-      <section>
-        <div class="block blackBg"></div>
+      <section class="wBg">
+        <div class="block blackBg">
+          <div id="welcome">
+            <h1>
+              APG Writing test script test:
+              <span
+                class="txt-type"
+                data-wait="3000"
+                data-words='[" Developer"," Designer"," Creator"]'
+              ></span>
+            </h1>
+            <h2>Welcome to my website.</h2>
+          </div>
+        </div>
       </section>
 
       <section>
@@ -60,23 +70,23 @@
       </section>
     </main>
 
-    <section>
-      <footer>
-        <div class="flex-container">
-          <div class="contact-logo">
-            <img
-              src="img/Hello-thisispig.jpg"
-              alt="Guinea Pig with phone"
-              id="contact-pig"
-            />
-          </div>
-          <div class="contact-info block">
-            Blah blah blah
-          </div>
+    <footer>
+      <div class="flex-container">
+        <div class="contact-logo">
+          <img
+            src="img/Hello-thisispig.jpg"
+            alt="Guinea Pig with phone"
+            id="contact-pig"
+          />
         </div>
-      </footer>
-    </section>
+        <div class="contact-info block">
+          Blah blah blah
+        </div>
+      </div>
+    </footer>
 
     <script src="app.js"></script>
+    <script src="typing.js"></script>
   </body>
 </html>
+!

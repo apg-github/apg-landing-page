@@ -2,9 +2,9 @@
 
 $fColor: white;
 $bgColor: rgb(31, 29, 29);
+$bgWColor: #white;
 
-//* general settings/styles below
-
+/*/ general settings/styles below*/
 ul,
 ol {
   text-decoration: none;
@@ -20,4 +20,11 @@ a:hover {
 }
 .blackBg {
   background-color: $bgColor;
+}
+
+.txt-type {
+  // css for typing effect span
+  .txt {
+    border-right: 0.1rem solid #777;
+  }
 }
