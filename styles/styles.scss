@@ -3,20 +3,20 @@
 @import "./_variables";
 @import "./main";
 @import "./mixins";
-
-//* styles below
+@import "./media";
 
 html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 20px;
 }
 body {
   font-family: Lato;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 15px;
+  font-size: 25px;
   //background-color: $bgColor;
 }
 .wBg {
@@ -32,7 +32,7 @@ nav {
   color: $fColor;
   .container {
     @include flexCenter(row);
-    height: 200px;
+    height: 20%;
     font-size: 4rem;
     width: 100%;
 
@@ -101,12 +101,11 @@ nav {
   font-size: 2rem;
   color: white;
   background-color: $bgColor;
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 #contact-pig {
@@ -118,13 +117,72 @@ nav {
   @include flexCenter(row);
 }
 
+input {
+  padding: 2rem;
+  text-align: start;
+  font-size: 1.5rem;
+}
+input::placeholder {
+  font-size: 1.5rem;
+}
+
+#contact-form {
+  flex-direction: column;
+  p {
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 6rem;
+  }
+}
+.name-email {
+  display: flex;
+  justify-content: space-around;
+  input {
+    width: 45% !important;
+    height: 4rem !important;
+  }
+}
+
+.wide {
+  width: 60%;
+  margin: 1.5rem;
+
+  input {
+    width: 100%;
+    height: 4rem;
+    background: #f5f5f5;
+    border-radius: 4px;
+  }
+  input:focus {
+    outline: none;
+  }
+  textarea[id="message"] {
+    height: 20rem;
+    width: 100%;
+    font-size: 1.5rem;
+
+    background: #f5f5f5;
+    border-radius: 4px;
+    padding: 2rem;
+    resize: none;
+  }
+  textarea:focus {
+    outline: none;
+  }
+}
+button[type="submit"] {
+  display: block;
+  background-color: $bgColor;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  width: 20%;
+}
+
 footer {
   div {
     min-width: 48%;
     font-size: 2rem;
   }
-}
-
-section {
-  padding: 5rem 0 5rem 0;
 }

@@ -7,9 +7,6 @@ main {
   width: 100vw;
 }
 
-.block {
-  min-height: 100vh;
-}
 .flex-custom {
   flex-wrap: wrap;
   justify-content: space-between;
@@ -20,8 +17,7 @@ main {
 }
 
 .tiles {
-  display: block;
-  height: 300px;
+  height: 25rem;
   width: 40%;
   align-self: center;
   background-color: $fColor;
