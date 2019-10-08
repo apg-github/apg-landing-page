@@ -17,7 +17,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 25px;
-  //background-color: $bgColor;
 }
 .wBg {
   background-color: $bgWColor;
@@ -32,7 +31,7 @@ nav {
   color: $fColor;
   .container {
     @include flexCenter(row);
-    height: 20%;
+
     font-size: 4rem;
     width: 100%;
 
@@ -46,10 +45,8 @@ nav {
       text-align: center;
 
       a {
-        //display: block;
         margin: auto auto;
         text-align: center;
-        justify-content: center;
         justify-content: center;
         height: 100%;
         font-size: 4rem;
@@ -97,20 +94,23 @@ nav {
 }
 #welcome {
   width: 100%;
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   color: white;
-  background-color: $bgColor;
-  height: 80%;
+  background-image: url(../img/welcome-img.jpg);
+  background-size: cover;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding-left: 5%;
 }
 
-#contact-pig {
-  max-width: 300px;
-  max-height: 300px;
+input,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .flex-container {
@@ -118,6 +118,7 @@ nav {
 }
 
 input {
+  border: 0;
   padding: 2rem;
   text-align: start;
   font-size: 1.5rem;
@@ -134,13 +135,22 @@ input::placeholder {
     margin: 0;
     padding-bottom: 6rem;
   }
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .name-email {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 0;
   input {
     width: 45% !important;
     height: 4rem !important;
+    margin: 0;
   }
 }
 
@@ -161,7 +171,7 @@ input::placeholder {
     height: 20rem;
     width: 100%;
     font-size: 1.5rem;
-
+    border: 0;
     background: #f5f5f5;
     border-radius: 4px;
     padding: 2rem;
@@ -180,9 +190,18 @@ button[type="submit"] {
   width: 20%;
 }
 
-footer {
+#footer {
+  width: 100%;
+  justify-items: center;
   div {
-    min-width: 48%;
-    font-size: 2rem;
+    width: 25%;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
+}
+p {
+  padding: 4rem 4rem 4rem 4rem;
 }

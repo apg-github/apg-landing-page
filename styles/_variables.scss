@@ -17,14 +17,9 @@ a:hover {
 
 .whiteBg {
   background-color: $fColor;
+  color: $bgColor;
 }
 .blackBg {
   background-color: $bgColor;
-}
-
-.txt-type {
-  // css for typing effect span
-  .txt {
-    border-right: 0.1rem solid #777;
-  }
+  color: white;
 }

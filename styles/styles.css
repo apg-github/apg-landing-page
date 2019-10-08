@@ -1,5 +1,4 @@
 /*/ general settings/styles below*/
-@import url(c:\Users\arkadiusz.grzybowski\Documents\Site1\styles\media.css);
 ul,
 ol {
   text-decoration: none;
@@ -12,14 +11,12 @@ a:hover {
 
 .whiteBg {
   background-color: white;
+  color: #1f1d1d;
 }
 
 .blackBg {
   background-color: #1f1d1d;
-}
-
-.txt-type .txt {
-  border-right: 0.1rem solid #777;
+  color: white;
 }
 
 main {
@@ -113,7 +110,6 @@ nav .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 20%;
   font-size: 4rem;
   width: 100%;
 }
@@ -140,7 +136,6 @@ nav .container .logo a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  justify-content: center;
   height: 100%;
   font-size: 4rem;
   color: white;
@@ -205,11 +200,12 @@ nav .container .navbar ul li a {
 
 #welcome {
   width: 100%;
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   color: white;
-  background-color: #1f1d1d;
-  height: 80%;
+  background-image: url(../img/welcome-img.jpg);
+  background-size: cover;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,14 +216,17 @@ nav .container .navbar ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5%;
 }
 
-#contact-pig {
-  max-width: 300px;
-  max-height: 300px;
+input,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .flex-container {
@@ -250,6 +249,7 @@ nav .container .navbar ul li a {
 }
 
 input {
+  border: 0;
   padding: 2rem;
   text-align: start;
   font-size: 1.5rem;
@@ -285,17 +285,37 @@ input::placeholder {
   padding-bottom: 6rem;
 }
 
+#contact-form form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .name-email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
 }
 
 .name-email input {
   width: 45% !important;
   height: 4rem !important;
+  margin: 0;
 }
 
 .wide {
@@ -318,6 +338,7 @@ input::placeholder {
   height: 20rem;
   width: 100%;
   font-size: 1.5rem;
+  border: 0;
   background: #f5f5f5;
   border-radius: 4px;
   padding: 2rem;
@@ -337,8 +358,21 @@ button[type="submit"] {
   width: 20%;
 }
 
-footer div {
-  min-width: 48%;
-  font-size: 2rem;
+#footer {
+  width: 100%;
+  justify-items: center;
+}
+
+#footer div {
+  width: 25%;
+}
+
+#footer div img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+p {
+  padding: 4rem 4rem 4rem 4rem;
 }
 /*# sourceMappingURL=styles.css.map */
