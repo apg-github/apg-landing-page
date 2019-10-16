@@ -25,3 +25,24 @@ writeText();
     }
   }, speed);
 })();
+
+function renderGalleryItem(imgNum) {
+  let gal = document.querySelector(".gallery");
+  for (let i = 0; i < imgNum; i++) {
+    fetch(`https://picsum.photos/600/480`)
+      .then(response => {
+        let photo = document.createElement("div");
+        photo.classList.add("fetched-div");
+        photo.innerHTML = `<img class="gallery-image" src="${response.url}" alt="gallery image" />`;
+        gal.appendChild(photo);
+      })
+      .catch(err => {
+        console.error(err);
+        let photo = document.createElement("div");
+        photo.classList.add("fetched-div");
+        photo.style.backgroundImage = "url(.../img/default.jpg)";
+        gal.appendChild(photo);
+      });
+  }
+}
+renderGalleryItem(8);
