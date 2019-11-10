@@ -1,5 +1,5 @@
 $(window).load(() => {
-  $(".loading-fullpage").fadeOut(1500);
+  $(".loading-fullpage");
 });
 
 let i = 0;
@@ -48,5 +48,6 @@ function renderGalleryItem(imgNum) {
         gal.appendChild(photo);
       });
   }
+  $(".loading-fullpage").fadeOut("slow");
 }
 renderGalleryItem(8);
