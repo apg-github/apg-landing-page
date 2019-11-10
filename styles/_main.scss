@@ -1,10 +1,7 @@
 //* file for styling the main site content
+
 main {
   width: 100%;
-}
-
-.container {
-  width: 100vw;
 }
 
 .flex-custom {
@@ -34,16 +31,25 @@ p {
 }
 
 .gallery {
+  display: flex;
+
   div {
-    display: block;
+    //display: block;
     margin: 2rem;
     width: 40%;
-    height: 40vw;
+    box-shadow: 25px 25px 10px grey;
 
     img {
-      object-fit: contain;
-      width: 100%;
-      height: 100%;
+      object-fit: cover;
+      min-width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  @media (max-width: 900px) {
+    flex-direction: column;
+    div {
+      width: 90%;
     }
   }
 }

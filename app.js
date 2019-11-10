@@ -40,7 +40,8 @@ function renderGalleryItem(imgNum) {
         console.error(err);
         let photo = document.createElement("div");
         photo.classList.add("fetched-div");
-        photo.style.backgroundImage = "url(.../img/default.jpg)";
+        let imgSrc = "../img/default.jpg";
+        photo.innerHTML = `<img class="gallery-image" src=${imgSrc} alt="gallery image" />`;
         gal.appendChild(photo);
       });
   }

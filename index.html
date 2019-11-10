@@ -4,6 +4,7 @@
 
     <title>Explore the world with us.</title>
     <meta name="description" content="Explore.org site" />
+    <link rel="icon" href="./favicon_black.ico" />
     <meta name="author" content="APG" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="HTML,CSS,JavaScript,Images" />
@@ -12,16 +13,19 @@
       href="https://fonts.googleapis.com/css?family=Kaushan+Script|Lato|Notable&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <section>
+    <section id="full-page">
       <nav>
-        <div class="container flex-container">
+        <div class="nav-container">
           <div class="logo"><a id="name"></a></div>
           <div class="navbar">
             <ul>
               <li class="nav-items"><a>About</a></li>
-              <li class="nav-items"><a>Informations</a></li>
               <li class="nav-items"><a>Views</a></li>
               <li class="nav-items"><a>Prices</a></li>
               <li class="nav-items"><a>Contact</a></li>
@@ -33,23 +37,23 @@
       <div class="wBg">
         <div class="block blackBg">
           <div id="welcome">
-            <h1>
-              APG Writing test script test:
+            <h4>
+              Humans are awesome.
               <span
                 class="txt-type"
                 data-wait="3000"
-                data-words='[" Developer"," Designer"," Creator"]'
+                data-words='[" Mind"," Dream"," Explore"]'
               ></span
               ><span id="cursor">|</span>
-            </h1>
-            <h2>Welcome to my website.</h2>
+            </h4>
+            <h5>Take a ride</h5>
           </div>
         </div>
       </div>
     </section>
 
     <main>
-      <section>
+      <section class="section-margin">
         <p>
           Nunc eu porttitor tortor, vitae malesuada risus. Integer viverra nisl
           mauris. Sed ultrices, augue id condimentum ultrices, tortor felis
@@ -61,50 +65,41 @@
         </p>
         <div class="gallery block whiteBg flex-container flex-custom"></div>
       </section>
-      <section>
-        <div class="block blackBg">
-          <p>
-            Maecenas commodo quis urna ut mollis. Quisque in molestie mauris,
-            sit amet scelerisque mauris. Aenean imperdiet neque vel mauris
-            eleifend porta. Sed pellentesque varius tellus at porta. Curabitur
-            pellentesque felis turpis, a egestas ipsum gravida in. Etiam
-            efficitur id est id vestibulum. Nullam molestie velit ut lacus
-            aliquam, ut rhoncus sapien rutrum. Nunc venenatis metus ac risus
-            convallis sollicitudin. Phasellus rhoncus ligula odio, eget lacinia
-            quam fermentum quis. Ut sollicitudin nunc a ornare varius. Quisque
-            tincidunt quam a tempor vehicula. Quisque rhoncus est ut rutrum
-            congue. Donec sit amet mollis libero. Proin nec eleifend erat. Nulla
-            ut tempor diam. Sed in nisi a arcu bibendum varius. In hac habitasse
-            platea dictumst. Aliquam luctus, tortor id imperdiet vestibulum,
-            lacus magna scelerisque lacus, at vulputate diam erat ac velit.
-            Aenean placerat mi vitae turpis malesuada sagittis. Quisque interdum
-            faucibus finibus. Quisque vitae nunc mollis, mollis nunc ut, rutrum
-            quam. Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. Cras eu convallis erat. Mauris
-            sed eros vitae risus congue lobortis quis sed neque. In bibendum
-            quam metus, in malesuada lorem vulputate sed. Aenean euismod ut eros
-            eget interdum. Donec eu dolor in augue luctus dignissim sit amet eu
-            massa. Aenean quis enim eu urna ornare lobortis. Pellentesque
-            accumsan ultrices quam, nec cursus sapien sagittis vel. In ut velit
-            eget lacus rhoncus varius. Quisque posuere sed nunc eget fringilla.
-            Suspendisse dictum porta libero quis varius. Praesent efficitur
-            justo eget orci maximus convallis. Nulla vulputate augue lorem.
-            Suspendisse eleifend ex quis mauris accumsan placerat. Phasellus non
-            tincidunt ex. Proin euismod bibendum sodales. Donec non mi
-            fringilla, blandit lectus nec, luctus libero. Sed imperdiet libero
-            sit amet luctus finibus. Maecenas risus eros, fringilla nec diam
-            non, iaculis fringilla ipsum. Nulla facilisi. Pellentesque sed massa
-            et velit auctor efficitur sit amet finibus enim. Pellentesque
-            efficitur efficitur pulvinar.
+      <section class="section-margin" id="pricing-block">
+        <div class="blackBg info">
+          <h1 class="info__title">Pick a pricing plan</h1>
+          <p class="info__description">
+            We did our best to meet your expectations. Please feel free to pick
+            the right plan for your needs. Remember that in any moment you can
+            switch your pricing plan.
           </p>
+        </div>
+        <div class="container">
+          <div class="plan">
+            <span><i class="fa fa-check-circle"></i></span>
+            <span>Standard</span>
+            <ul>
+              <li>Learn more</li>
+            </ul>
+          </div>
+          <div class="plan">
+            <span><i class="fa fa-heart"></i></span>
+            <span>Pro</span>
+            <ul>
+              <li>Learn more</li>
+            </ul>
+          </div>
+          <div class="plan">
+            <span><i class="fa fa-heart"></i></span>
+            <span>Exclusive</span>
+            <ul>
+              <li>Learn more</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section>
-        <div class="block blackBg"></div>
-      </section>
-
-      <section>
+      <section class="section-margin">
         <div id="contact-form" class="block whiteBg flex-container">
           <p>Contact us below</p>
           <form>
@@ -126,30 +121,9 @@
           </form>
         </div>
       </section>
-      <section>
-        <div class="block blackBg">
-          <p>
-            Praesent elementum arcu sed diam imperdiet lacinia. Nulla
-            ullamcorper efficitur tristique. Morbi rutrum eleifend urna. Duis
-            lobortis nulla eu massa mollis, id consectetur erat suscipit.
-            Maecenas pellentesque placerat ante eget pharetra. Aliquam aliquam
-            purus nec venenatis pulvinar. Vestibulum iaculis magna massa, sed
-            pharetra nisi pulvinar vel. Proin rhoncus nunc ligula, non hendrerit
-            dui placerat at.
-          </p>
-          <p>
-            Vestibulum iaculis magna massa, sed pharetra nisi pulvinar vel.
-            Proin rhoncus nunc ligula, non hendrerit dui placerat at.
-          </p>
-          <p>
-            Vestibulum iaculis magna massa, sed pharetra nisi pulvinar vel.
-            Proin rhoncus nunc ligula, non hendrerit dui placerat at.
-          </p>
-        </div>
-      </section>
     </main>
 
-    <footer>
+    <footer class="section-margin">
       <div id="footer" class="flex-container whiteBg">
         <div class="contact-logo">
           <img
