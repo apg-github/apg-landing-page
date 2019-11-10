@@ -1,7 +1,3 @@
-$(window).load(() => {
-  $(".loading-fullpage");
-});
-
 let i = 0;
 let ted = "Exploited Explorers!";
 function writeText() {
@@ -39,6 +35,9 @@ function renderGalleryItem(imgNum) {
         photo.innerHTML = `<img class="gallery-image" src="${response.url}" alt="gallery image" />`;
         gal.appendChild(photo);
       })
+      .then(() => {
+        i == imgNum - 1 ? $(".loading-fullpage").fadeOut(1000) : null;
+      })
       .catch(err => {
         console.error(err);
         let photo = document.createElement("div");
@@ -46,8 +45,10 @@ function renderGalleryItem(imgNum) {
         let imgSrc = "../img/default.jpg";
         photo.innerHTML = `<img class="gallery-image" src=${imgSrc} alt="gallery image" />`;
         gal.appendChild(photo);
+      })
+      .then(() => {
+        i == imgNum - 1 ? $(".loading-fullpage").fadeOut(1000) : null;
       });
   }
-  $(".loading-fullpage").fadeOut("slow");
 }
 renderGalleryItem(8);
