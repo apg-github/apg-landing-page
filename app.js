@@ -1,6 +1,9 @@
-var i = 0;
-var ted = "Exploited Explorers!";
+$(window).load(function() {
+  $(".se-pre-con").fadeOut("slow");
+});
 
+let i = 0;
+let ted = "Exploited Explorers!";
 function writeText() {
   let speed = 100; //! duration of effect
   if (i < ted.length) {
