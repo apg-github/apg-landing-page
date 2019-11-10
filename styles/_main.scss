@@ -53,6 +53,10 @@ p {
     }
   }
 }
+.fetched-div {
+  will-change: opacity;
+  transition: opacity 0.15s ease-in-out;
+}
 .fetched-div:hover {
-  opacity: 97%;
+  opacity: 90%;
 }
