@@ -1,5 +1,5 @@
-$(window).load(function() {
-  $(".se-pre-con").fadeOut("slow");
+$(window).load(() => {
+  $(".loading-fullpage").fadeOut(1500);
 });
 
 let i = 0;
