@@ -608,7 +608,7 @@ p {
 
 .contact-info ul {
   padding: 0;
-  list-style-type: circle;
+  list-style-type: none;
 }
 
 .contact-info ul li {
