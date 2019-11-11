@@ -1,8 +1,4 @@
 //! init on DOMLoad
-window.addEventListener("DOMContentLoaded", event => {
-  console.log("DOM fully loaded and parsed");
-});
-
 document.addEventListener("DOMContentLoaded", init);
 
 //! our function
