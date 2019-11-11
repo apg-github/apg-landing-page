@@ -110,7 +110,7 @@ function renderGalleryItem(imgNum) {
         gal.appendChild(photo);
       })
       .then(() => {
-        i == imgNum - 1 ? $(".loading-fullpage").fadeOut(1000) : null;
+        i == imgNum - 1 ? $(".loading-fullpage").fadeOut(100) : null;
       });
   }
 }
