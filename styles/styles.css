@@ -127,6 +127,11 @@ body {
   }
 }
 
+body a {
+  text-decoration: none;
+  color: white;
+}
+
 .no-js #loader {
   display: none;
 }

@@ -22,6 +22,10 @@ body {
       font-size: 30px;
     }
   }
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 .no-js #loader {
@@ -123,7 +127,6 @@ nav {
           justify-content: center;
 
           a {
-            //height: 100%;
             font-size: 1.3rem;
             text-align: center;
             line-height: 100%;
