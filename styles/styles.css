@@ -331,8 +331,15 @@ nav .nav-container .navbar ul li a {
   opacity: 0.75;
 }
 
+@media (max-width: 800px) {
+  #welcome {
+    background-image: url(../img/welcome-img-medium.jpg);
+  }
+}
+
 @media (max-width: 400px) {
   #welcome {
+    background-image: url(../img/welcome-img-small.jpg);
     padding-left: 10px;
   }
 }

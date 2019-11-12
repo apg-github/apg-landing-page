@@ -159,9 +159,10 @@ nav {
   padding-left: 50px;
   opacity: 0.75;
   @media (max-width: 800px) {
-    //padding-left: 25px;
+    background-image: url(../img/welcome-img-medium.jpg);
   }
   @media (max-width: 400px) {
+    background-image: url(../img/welcome-img-small.jpg);
     padding-left: 10px;
   }
 }
