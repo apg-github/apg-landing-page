@@ -184,7 +184,7 @@ nav .nav-container {
   width: 100%;
   max-width: 100%;
   height: 100%;
-  margin: 0 0;
+  margin: 0;
   opacity: 0.5;
 }
 
@@ -195,17 +195,19 @@ nav .nav-container .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-@media (max-width: 600px) {
-  nav .nav-container .logo {
-    width: 100%;
-    text-align: center;
-  }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav .nav-container .logo a {
-  margin: auto auto;
+  width: 100%;
+  margin: 0;
   text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -227,6 +229,7 @@ nav .nav-container .navbar {
   display: -ms-flexbox;
   display: flex;
   min-width: 65%;
+  max-width: 65%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -245,7 +248,7 @@ nav .nav-container .navbar ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 80%;
   padding: 0;
   margin: 0;
   height: 50%;
@@ -257,6 +260,9 @@ nav .nav-container .navbar ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
@@ -277,7 +283,7 @@ nav .nav-container .navbar ul li {
 }
 
 nav .nav-container .navbar ul li a {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
   line-height: 100%;
   -webkit-box-pack: center;
@@ -285,6 +291,12 @@ nav .nav-container .navbar ul li a {
           justify-content: center;
   vertical-align: center;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+@media (max-width: 600px) {
+  nav .nav-container .navbar ul li a {
+    padding-right: 20px;
+  }
 }
 
 #full-page {
@@ -317,12 +329,6 @@ nav .nav-container .navbar ul li a {
           box-sizing: border-box;
   padding-left: 50px;
   opacity: 0.75;
-}
-
-@media (max-width: 800px) {
-  #welcome {
-    padding-left: 25px;
-  }
 }
 
 @media (max-width: 400px) {
@@ -492,8 +498,11 @@ p {
 }
 
 .contact-info {
-  padding: 0.5rem;
   text-align: center;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
 }
 
 @media (max-width: 800px) {
@@ -539,14 +548,12 @@ p {
 
 @media (max-width: 800px) {
   .contact-info p {
-    padding: 0 1rem 0 1rem;
     font-size: 1rem;
   }
 }
 
 @media (max-width: 800px) {
   .contact-info p {
-    padding: 0 1rem 0 1rem;
     font-size: 0.7rem;
   }
 }
@@ -613,6 +620,13 @@ p {
     width: auto;
     min-width: 25%;
     max-width: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  #footer .contact-logo {
+    min-width: 25%;
+    max-width: 75%;
   }
 }
 
@@ -710,6 +724,7 @@ p {
 }
 
 .name-email input {
+  font-size: 1rem;
   width: 45% !important;
   margin: 0;
 }
@@ -734,6 +749,7 @@ p {
 }
 
 .wide input {
+  font-size: 1rem;
   width: 100%;
   background: #f5f5f5;
   border-radius: 4px;
@@ -768,5 +784,9 @@ button[type="submit"] {
   border-radius: 4px;
   -webkit-box-shadow: 5px 5px 5px grey;
           box-shadow: 5px 5px 5px grey;
+}
+
+button[type="submit"]:focus {
+  outline: none;
 }
 /*# sourceMappingURL=styles.css.map */
