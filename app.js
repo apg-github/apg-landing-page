@@ -118,6 +118,7 @@ renderGalleryItem(8);
 
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    //console.log(anchor);
     anchor.addEventListener("click", e => {
       e.preventDefault();
       document.querySelector(anchor.getAttribute("href")).scrollIntoView({
