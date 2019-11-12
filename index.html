@@ -107,14 +107,25 @@
           <p>Contact us</p>
           <form name="contact" method="POST" data-netlify="true">
             <div class="name-email wide">
-              <input type="text" placeholder="Your name *" required />
-              <input type="email" placeholder="Your email *" required />
+              <input
+                name="name"
+                type="text"
+                placeholder="Your name *"
+                required
+              />
+              <input
+                name="email"
+                type="email"
+                placeholder="Your email *"
+                required
+              />
             </div>
             <div class="wide">
-              <input type="text" placeholder="Topic" />
+              <input name="topic" type="text" placeholder="Topic" />
             </div>
             <div class="wide">
               <textarea
+                name="message"
                 id="message"
                 placeholder="Your message *"
                 required
