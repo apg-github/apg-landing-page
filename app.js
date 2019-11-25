@@ -86,19 +86,20 @@ function init() {
   new Writerer(txtElement, words, wait);
 }
 
-function renderGalleryItem(imgNum) {
-  let gal = document.querySelector(".gallery");
+function renderGallery(imageNumber) {
+  let gallery = document.querySelector(".gallery");
 
-  for (let i = 0; i < imgNum; i++) {
+  for (let i = 0; i < imageNumber; i++) {
     fetch(`https://picsum.photos/600/480`)
       .then(response => {
         let photo = document.createElement("div");
         photo.classList.add("fetched-div");
+
         photo.innerHTML = `<img class="gallery-image" src="${response.url}" alt="gallery image" />`;
-        gal.appendChild(photo);
+        gallery.appendChild(photo);
       })
       .then(() => {
-        i == imgNum - 1 ? $(".loading-fullpage").fadeOut(1000) : null;
+        //i == imageNumber - 1 ? $(".loading-fullpage").fadeOut(1000) : null;
       })
       .catch(err => {
         console.error(err);
@@ -106,15 +107,17 @@ function renderGalleryItem(imgNum) {
         photo.classList.add("fetched-div");
         let imgSrc = "../img/default.jpg";
         photo.innerHTML = `<img class="gallery-image" src=${imgSrc} alt="gallery image" />`;
-        gal.appendChild(photo);
+        gallery.appendChild(photo);
       })
       .then(() => {
-        i == imgNum - 1 ? $(".loading-fullpage").fadeOut(10) : null;
+        //i == imageNumber - 1 ? $(".loading-fullpage").fadeOut(1000) : null;
       });
   }
 }
-
-renderGalleryItem(4);
+(function() {
+  renderGallery(4);
+  $(".loading-fullpage").fadeOut(1000);
+})();
 
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
