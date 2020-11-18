@@ -9,10 +9,16 @@ Contact form is connected with netlify and allows to send the message to site ad
 Site uses webpack to bundle files into one file.
 
 To launch site locally, clone repository and:
-``` npm install ```
-``` npm run build ```
-``` npm run start ``` 
-site will be served locally.
+``` 
+npm install
+```
+```
+npm run build 
+```
+```
+npm run start
+``` 
+
 
 ## api used:
 * https://picsum.photos/600/480 to fetch images
