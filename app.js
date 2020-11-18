@@ -1,7 +1,5 @@
 import hideNav from "./navbarHide";
 
-hideNav();
-
 let i = 0;
 let ted = "Travel corp!";
 function writeText() {
@@ -30,7 +28,6 @@ writeText();
   }, speed);
 })();
 
-//! init on DOMLoad
 document.addEventListener("DOMContentLoaded", init);
 
 class Writerer {
@@ -84,6 +81,22 @@ function init() {
   const wait = txtElement.getAttribute("data-wait");
 
   new Writerer(txtElement, words, wait);
+
+  renderGallery(4);
+
+  hideNav();
+
+  $(".loading-fullpage").fadeOut(1000);
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  
+    anchor.addEventListener("click", e => {
+      e.preventDefault();
+      document.querySelector(anchor.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
 }
 
 function renderGallery(imageNumber) {
@@ -98,9 +111,6 @@ function renderGallery(imageNumber) {
         photo.innerHTML = `<img class="gallery-image" src="${response.url}" alt="gallery image" />`;
         gallery.appendChild(photo);
       })
-      .then(() => {
-        //i == imageNumber - 1 ? $(".loading-fullpage").fadeOut(1000) : null;
-      })
       .catch(err => {
         console.error(err);
         let photo = document.createElement("div");
@@ -109,25 +119,5 @@ function renderGallery(imageNumber) {
         photo.innerHTML = `<img class="gallery-image" src=${imgSrc} alt="gallery image" />`;
         gallery.appendChild(photo);
       })
-      .then(() => {
-        //i == imageNumber - 1 ? $(".loading-fullpage").fadeOut(1000) : null;
-      });
   }
 }
-(function() {
-  renderGallery(4);
-  $(".loading-fullpage").fadeOut(1000);
-})();
-
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    //console.log(anchor);
-    anchor.addEventListener("click", e => {
-      e.preventDefault();
-
-      document.querySelector(anchor.getAttribute("href")).scrollIntoView({
-        behavior: "smooth"
-      });
-    });
-  });
-});

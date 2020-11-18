@@ -1,7 +1,9 @@
 const hideNav = () => {
   let prevScrollpos = window.pageYOffset;
+
   window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
+    let currentScrollPos = window.pageYOffset;
+    
     if (prevScrollpos > currentScrollPos) {
       document.querySelector("#navvy").style.top = "0";
     } else {
