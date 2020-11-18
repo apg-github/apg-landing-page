@@ -1,19 +1,30 @@
 import hideNav from "./navbarHide";
 
-let i = 0;
-let ted = "Travel corp!";
-function writeText() {
-  let speed = 100;
-  if (i < ted.length) {
-    document.querySelector("#name").innerHTML += ted.charAt(i);
-    i++;
-  }
-  setTimeout(writeText, speed);
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const txtElement = document.querySelector(".txt-type");
+  const words = JSON.parse(txtElement.getAttribute("data-words"));
+  const wait = txtElement.getAttribute("data-wait");
 
-writeText();
+  new Writerer(txtElement, words, wait);
 
-(function() {
+  renderGallery(4);
+  writeText();
+  hideNav();
+  pulseCursor();
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", e => {
+      e.preventDefault();
+      document.querySelector(anchor.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
+
+  $(".loading-fullpage").fadeOut(1000);
+});
+
+function pulseCursor() {
   let cursor = true;
   const speed = 650;
 
@@ -26,9 +37,22 @@ writeText();
       cursor = true;
     }
   }, speed);
-})();
+}
 
-document.addEventListener("DOMContentLoaded", init);
+let i = 0;
+function writeText() {
+  const textToType = "Travel corp!";
+  const speed = 100;
+
+  if (i < textToType.length) {
+    document.querySelector("#name").innerHTML += textToType.charAt(i);
+    i++;
+  } else {
+    return null
+  }
+
+  setTimeout(writeText, speed);
+}
 
 class Writerer {
   constructor(txtElement, words, wait = 3000) {
@@ -43,8 +67,8 @@ class Writerer {
 
   type() {
     const current = this.wordIndex % this.words.length;
-
     const fullTxt = this.words[current];
+    let typeSpeed = 100;
 
     if (this.isDeleting) {
       this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -53,8 +77,6 @@ class Writerer {
     }
 
     this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-
-    let typeSpeed = 100;
 
     if (this.isDeleting) {
       typeSpeed /= 2;
@@ -73,34 +95,8 @@ class Writerer {
   }
 }
 
-function init() {
-  const txtElement = document.querySelector(".txt-type");
-
-  const words = JSON.parse(txtElement.getAttribute("data-words"));
-
-  const wait = txtElement.getAttribute("data-wait");
-
-  new Writerer(txtElement, words, wait);
-
-  renderGallery(4);
-
-  hideNav();
-
-  $(".loading-fullpage").fadeOut(1000);
-
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  
-    anchor.addEventListener("click", e => {
-      e.preventDefault();
-      document.querySelector(anchor.getAttribute("href")).scrollIntoView({
-        behavior: "smooth"
-      });
-    });
-  });
-}
-
 function renderGallery(imageNumber) {
-  let gallery = document.querySelector(".gallery");
+  const gallery = document.querySelector(".gallery");
 
   for (let i = 0; i < imageNumber; i++) {
     fetch(`https://picsum.photos/600/480`)
