@@ -2,7 +2,7 @@
 
 ## Live demo: https://apg-landing-page.netlify.app/
 
-Landing page is a preview of some invented company site which offer travelling and bussiness runs all over the planet.
+Landing page is a preview of some imaginary company site which offer travelling and bussiness runs all over the planet.
 
 Page is responsive and mobile friendly.
 
@@ -23,8 +23,5 @@ npm run build
 npm run start
 ``` 
 
-
 ## api used:
 * https://picsum.photos/600/480 to fetch images
-
-## Live demo: https://apg-landing-page.netlify.app/
