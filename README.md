@@ -10,7 +10,7 @@ Images are fetched from external API, to make site look different every time. In
 
 Contact form is connected with netlify and allows to send the message to site administrator. Form also implements validation of fields.
 
-Site uses webpack to bundle files into one file.
+Project use webpack
 
 To launch site locally, clone repository and:
 ``` 
